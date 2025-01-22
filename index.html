@@ -23,7 +23,7 @@
 </head>
 
 <body>
-
+    <audio id="backgroundMusic" src="musik/musik_wedding.mp3"></audio>
     <section id="hero" class="hero w-100 h-100 mx-auto text-center 
     d-flex justify-content-center align-items-center text-white">
         <main>
@@ -31,7 +31,8 @@
             <h1>Alpian & Fani</h1>
             <P>Akan melangsungkan resepsi pernikahan dalam:</P>
             <div class="my-countdown simply-countdown-dark"></div>
-            <a href="#undangan" class="btn btn-lg mt-4">Lihat Undangan</a>
+            <a href="#home" class="btn btn-lg mt-4" id="playButton">Lihat Undangan</a>
+            </div>
         </main>
     </section>
 
@@ -111,7 +112,8 @@
                 <div class="col-md-8 col-10 text-center">
                     <H2>Informasi Acara</H2>
                     <p class="alamat">Alamat: Jl. TGH Umar No.22 Kecamatan Selong, Kabupaten Lombok Timur</p>
-                    <a href="https://maps.app.goo.gl/aGwntcm5ezF3bRqXA" target="_blank" class="btn btn-light">Ke Lokasi</a>
+                    <a href="https://maps.app.goo.gl/aGwntcm5ezF3bRqXA" target="_blank" class="btn btn-light">Ke
+                        Lokasi</a>
                 </div>
             </div>
 
@@ -120,43 +122,60 @@
                     <div class="card text-center text-bg-light mb-5">
                         <div class="card-header">Akad Nikah</div>
                         <div class="card-body">
-                          <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <i class="bi bi-clock d-block"></i>
-                                <span>08:00 - 09:00</span>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <i class="bi bi-clock d-block"></i>
+                                    <span>08:00 - 09:00</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="bi bi-calendar4-event d-block"></i>
+                                    <span>Rabu, 20 Agustus 2025</span>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <i class="bi bi-calendar4-event d-block"></i>
-                                <span>Rabu, 20 Agustus 2025</span>
-                            </div>
-                          </div>
                         </div>
-                        <div class="card-footer">Tamu undangan harap menjaga ketertiban saat acara berlangsung 😊😉</div>
-                      </div>
+                        <div class="card-footer">Tamu undangan harap menjaga ketertiban saat acara berlangsung 😊😉
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-5 col-10">
                     <div class="card text-center text-bg-light">
                         <div class="card-header">Resepsi</div>
                         <div class="card-body">
-                          <div class="row justify-content-center">
-                            <div class="col-md-6">
-                                <i class="bi bi-clock d-block"></i>
-                                <span>10:00 - Selesai</span>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <i class="bi bi-clock d-block"></i>
+                                    <span>10:00 - Selesai</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="bi bi-calendar4-event d-block"></i>
+                                    <span>Rabu, 20 Agustus 2025</span>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <i class="bi bi-calendar4-event d-block"></i>
-                                <span>Rabu, 20 Agustus 2025</span>
-                            </div>
-                          </div>
                         </div>
-                        <div class="card-footer">Tamu undangan harap menjaga ketertiban saat acara berlangsung 😊😉</div>
-                      </div>
+                        <div class="card-footer">Tamu undangan harap menjaga ketertiban saat acara berlangsung 😊😉
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <script>
+        // Ambil elemen tombol dan audio
+        const playButton = document.getElementById('playButton');
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // Tambahkan event listener untuk tombol
+        playButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Mencegah default action dari anchor
+            backgroundMusic.play(); // Memutar musik
+
+            // Scroll ke bagian dengan id="home"
+            const homeSection = document.getElementById('home');
+            homeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
