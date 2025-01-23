@@ -286,7 +286,6 @@ body {
     }
 
     .timeline li .timeline-panel {
-        width: 100%;
-        transform: translateX(-20px);
+        width: 70%;
     }
 }
