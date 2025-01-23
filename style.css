@@ -88,7 +88,8 @@ body {
     background-image: url(img/bg_home.png);
     background-size: cover;
     min-height: 100vh;
-    padding-top: 8rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
 }
 
 .home h2 {
