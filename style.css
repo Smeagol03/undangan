@@ -89,7 +89,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     padding-top: 10rem;
-    padding-bottom: 8rem;
+    padding-bottom: 8 rem;
 }
 
 .home h2 {
@@ -249,7 +249,6 @@ body {
 
 
 
-
 /* ukuran laptop */
 
 @media (max-width: 992px) {
@@ -279,6 +278,7 @@ body {
 }
 
 /* ukuran handphone */
+
 @media (max-width: 576px) {
     .timeline li .timeline-image {
         width: 80px;
@@ -287,5 +287,17 @@ body {
 
     .timeline li .timeline-panel {
         width: 70%;
+    }
+
+    .timeline-heading h3 {
+        font-size: 1rem;
+    }
+    
+    .timeline-heading span {
+        font-size: 1rem;
+    }
+    
+    .timeline-body p {
+        font-size: 0.9rem;
     }
 }
