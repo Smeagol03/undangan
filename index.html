@@ -377,10 +377,20 @@
 
     </section>
 
-    <section id="komentar" class="komentar">
-        <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
-        <div class="commonninja_component pid-f8f7e41a-fcfd-4667-ba96-86b68919c3da"></div>
-    </section>
+  <section id="comments" class="comments-section">
+    <h2>Kasih Sayang</h2>
+    <p>Ucapan Anda untuk kedua mempelai 😁</p>
+    
+    <!-- Form untuk menulis komentar -->
+    <form id="commentForm">
+        <input type="text" id="nameInput" placeholder="Nama Anda" required>
+        <textarea id="commentInput" placeholder="Tulis ucapan Anda di sini..." required></textarea>
+        <button type="submit" class="btn">Kirim Ucapan</button>
+    </form>
+
+    <!-- Daftar komentar yang sudah dikirim -->
+    <div id="commentList" class="comment-list"></div>
+</section>
 
     <footer>
         <div class="container">
@@ -465,6 +475,51 @@
 
         disableScroll();
     </script>
+
+<script>
+    // Ambil elemen form dan daftar komentar
+    const commentForm = document.getElementById('commentForm');
+    const commentList = document.getElementById('commentList');
+
+    // Fungsi untuk memuat komentar dari localStorage
+    function loadComments() {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        commentList.innerHTML = comments.map(comment => `
+            <div class="comment-item">
+                <strong>${comment.name}</strong>
+                <p>${comment.comment}</p>
+            </div>
+        `).join('');
+    }
+
+    // Fungsi untuk menyimpan komentar ke localStorage
+    function saveComment(name, comment) {
+        const comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push({ name, comment });
+        localStorage.setItem('comments', JSON.stringify(comments));
+    }
+
+    // Event listener untuk form komentar
+    commentForm.addEventListener('submit', function (event) {
+        event.preventDefault(); // Mencegah form submit
+
+        // Ambil nilai input
+        const name = document.getElementById('nameInput').value;
+        const comment = document.getElementById('commentInput').value;
+
+        // Simpan komentar
+        saveComment(name, comment);
+
+        // Muat ulang daftar komentar
+        loadComments();
+
+        // Reset form
+        commentForm.reset();
+    });
+
+    // Muat komentar saat halaman pertama kali dimuat
+    loadComments();
+</script>
 
     <script>
         window.addEventListener("load", function () {
