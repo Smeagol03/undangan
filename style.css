@@ -521,6 +521,11 @@ footer ul li a:hover i {
 /* ukuran handphone */
 
 @media (max-width: 576px) {
+    .home .couple img {
+        width: 200px;
+        height: 300px;
+    }
+   
     .timeline li .timeline-image {
         width: 80px;
         height: 80px;
