@@ -126,7 +126,6 @@ body {
 .home {
     background-image: url(img/bg_home.png);
     background-size: cover;
-    min-height: 100vh;
     padding-top: 8rem;
     padding-bottom: 8rem;
 }
@@ -166,8 +165,8 @@ body {
 }
 
 .home .couple img {
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 15px; /* Border radius untuk gambar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow untuk gambar */
