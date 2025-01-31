@@ -117,10 +117,6 @@ body {
 
 .home .couple {
     margin-top: 70px;
-    padding: 20px;
-    background-color: #f9f9f9; /* Warna latar belakang */
-    border-radius: 15px; /* Border radius untuk container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk container */
 }
 
 .home .couple h3 {
