@@ -61,30 +61,66 @@ body {
     color: white;
 }
 
+/* Navbar Styling */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition */
+}
+
+.navbar.bg-transparent {
+    background-color: rgba(255, 255, 255, 0.5) !important; /* Putih transparan */
+}
+
+.navbar.sticky {
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Warna putih solid saat sticky */
+    padding: 10px 0; /* Padding lebih kecil saat sticky */
 }
 
 .navbar-brand {
+  color: var(--bg) !important; 
     font-family: "Pacifico", serif;
-    font-size: 1.8rem;
-  }
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
+.navbar-toggler {
+  color: var(--bg) !important; 
+    border: none !important; /* Hilangkan border */
+    outline: none !important; /* Hilangkan outline */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    color: var(--bg);
+    font-size: 1rem;
+    margin: 0 10px; /* Jarak antar nav-link */
+    transition: color 0.3s ease; /* Efek transisi */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #e74c3c !important; /* Warna saat hover */
+}
+
+/* Offcanvas Styling */
 .offcanvas {
-    height: 100vh;
+    background-color: white !important; /* Putih transparan */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Garis bawah header */
 }
 
 .offcanvas-title {
     font-family: "Pacifico", serif;
-    font-size: 1.8rem;
+    color: var(--bg); /* Warna teks judul offcanvas */
 }
 
-.offcanvas-body {
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
+.btn-close {
+    filter: invert(0); /* Warna ikon close hitam */
 }
 
 .home {
@@ -136,7 +172,7 @@ body {
     border-radius: 15px; /* Border radius untuk gambar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow untuk gambar */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
-}
+}#42445A
 
 .home .couple img:hover {
     transform: scale(1.05); /* Membesar saat dihover */
@@ -525,6 +561,16 @@ footer ul li a:hover i {
 /* ukuran handphone */
 
 @media (max-width: 576px) {
+    .navbar-nav {
+
+        text-align: center; /* Pusatkan teks di mobile */
+
+    }
+
+    .nav-link {
+        margin: 10px 0; /* Jarak antar nav-link di mobile */
+    }
+    
     .home .couple img {
         width: 100%; /* Lebar gambar mengikuti container */
         height: auto; /* Tinggi disesuaikan secara otomatis */
