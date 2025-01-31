@@ -515,6 +515,11 @@ footer ul li a:hover i {
         width: 150px;
         height: 150px;
     }
+
+    .home .couple img {
+    width: 200px;
+    height: 300px;
+    }
 }
 
 /* ukuran handphone */
