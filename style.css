@@ -522,8 +522,9 @@ footer ul li a:hover i {
 
 @media (max-width: 576px) {
     .home .couple img {
-        width: 150px;
-        height: 250px;
+        width: 100%; /* Lebar gambar mengikuti container */
+        height: auto; /* Tinggi disesuaikan secara otomatis */
+        max-width: 300px; /* Lebar maksimum untuk mobile */
     }
    
     .timeline li .timeline-image {
