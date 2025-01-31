@@ -38,32 +38,36 @@
         </main>
     </section>
 
-    <!-- <nav class="navbar navbar-expand-md bg-transparent sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">alPani</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">alPani</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link" href="#">Home</a>
-                        <a class="nav-link" href="#">Info</a>
-                        <a class="nav-link" href="#">Story</a>
-                        <a class="nav-link" href="#">Gallery</a>
-                        <a class="nav-link" href="#">RSVP</a>
-                        <a class="nav-link" href="#">Gifts</a>
-                    </div>
-                </div>
-            </div>
+   <nav class="navbar navbar-expand-md bg-transparent sticky-top">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">alPani</a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">alPani</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#info">Info</a>
+          <a class="nav-link" href="#story">Story</a>
+          <a class="nav-link" href="#gallery">Gallery</a>
+          <a class="nav-link" href="#rsvp">RSVP</a>
+          <a class="nav-link" href="#hadiah">Gifts</a>
+          <a class="nav-link" href="#comments">Ucapan</a>
         </div>
-    </nav> -->
+      </div>
+    </div>
+  </div>
+</nav>
 
     <section id="home" class="home">
         <div class="container">
@@ -455,6 +459,41 @@
             homeSection.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) { // Ubah 50 sesuai kebutuhan
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const offcanvas = document.querySelector('.offcanvas'); // Target offcanvas
+    const navLinks = document.querySelectorAll('.offcanvas-body .nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function(event) {
+        event.preventDefault(); // Mencegah perilaku default link
+        const targetId = this.getAttribute("href"); // Ambil nilai href (misalnya #home)
+        const targetSection = document.querySelector(targetId); // Ambil elemen tujuan
+
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 60, // Sesuaikan offset jika navbar fixed
+            behavior: "smooth" // Efek smooth scroll
+          });
+        }
+
+        // Tutup offcanvas setelah klik
+        const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas);
+        offcanvasInstance.hide();
+      });
+    });
+  });
+</script>
 
     <script>
         simplyCountdown('.my-countdown', {
