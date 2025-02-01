@@ -202,6 +202,17 @@ body {
     transition: color 0.3s ease;
 }
 
+.doa1 {
+    background-color: var(--pink);
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.doa1 p {
+  font-family: "Pacifico", serif;
+}
+
 .info {
     background-color: var(--bg);
     color: white;
