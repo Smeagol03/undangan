@@ -94,11 +94,9 @@ body {
 
 .nav-link {
     color: var(--bg);
-    font-size: 1rem;
-    margin: 0 10px; /* Jarak antar nav-link */
+    font-size: 1rem;
     transition: color 0.3s ease; /* Efek transisi */
-    text-transform: uppercase;
-    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
