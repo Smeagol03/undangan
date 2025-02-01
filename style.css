@@ -67,23 +67,23 @@ body {
 }
 
 .navbar.bg-transparent {
-    background-color: rgba(255, 255, 255, 0.5) !important; /* Putih transparan */
+    background-color: rgba(255, 255, 255, 0.7) !important; /* Putih transparan */
 }
 
 .navbar.sticky {
-    background-color: rgba(255, 255, 255, 0.9) !important; /* Warna putih solid saat sticky */
+    background-color: rgba(255, 255, 255, 0.7) !important; /* Warna putih solid saat sticky */
     padding: 10px 0; /* Padding lebih kecil saat sticky */
 }
 
 .navbar-brand {
-  color: var(--bg) !important; 
+  color: black !important; 
     font-family: "Pacifico", serif;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .navbar-toggler {
-  color: var(--bg) !important; 
+  color: black !important; 
     border: none !important; /* Hilangkan border */
     outline: none !important; /* Hilangkan outline */
 }
@@ -93,14 +93,14 @@ body {
 }
 
 .nav-link {
-    color: var(--bg);
-    font-size: 1rem;
+    color: black;
+    font-size: 1rem;
     transition: color 0.3s ease; /* Efek transisi */
-    text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
-    color: #e74c3c !important; /* Warna saat hover */
+    color: var(--pink) !important; /* Warna saat hover */
 }
 
 /* Offcanvas Styling */
@@ -114,7 +114,7 @@ body {
 
 .offcanvas-title {
     font-family: "Pacifico", serif;
-    color: var(--bg); /* Warna teks judul offcanvas */
+    color: black; /* Warna teks judul offcanvas */
 }
 
 .btn-close {
@@ -385,6 +385,7 @@ color: var(--pink);
 .rsvp button {
     background-color: var(--pink);
     color: white;
+    font-family: "Pacifico", serif;
     border: 1px solid var(--pink);
 }
 
@@ -442,7 +443,7 @@ color: var(--pink);
 }
 
 #commentForm button {
-    background-color: #ff69b4;
+    font-family: "Pacifico", serif;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -452,7 +453,7 @@ color: var(--pink);
 }
 
 #commentForm button:hover {
-    background-color: #ff1493;
+    background-color: black;
 }
 
 .comment-list {
