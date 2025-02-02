@@ -33,6 +33,24 @@ body {
     min-height: 100vh;
 }
 
+.hero .mempelai img {
+    width: 100%; /* Agar fleksibel mengikuti container */
+    max-width: 400px; /* Batasi agar tidak terlalu besar di desktop */
+    height: auto; /* Menjaga rasio gambar */
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 40px;
+}
+
+.hero .mempelai img:hover {
+
+    transform: scale(1.05); /* Membesar saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow lebih tebal saat dihover */
+}
+
+        
 .hero h1, .hero h4, .hero p {
     text-shadow: var(--shadow);
 }
@@ -40,6 +58,8 @@ body {
 .hero h1 {
     font-family: "Sacramento", serif;
     font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .hero h4 {
@@ -142,6 +162,11 @@ body {
     margin-bottom: 1rem;
 }
 
+.my-countdown {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 .home p,
 .hadiah p {
     font-size: 1.1rem;
@@ -169,7 +194,7 @@ body {
     border-radius: 15px; /* Border radius untuk gambar */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow untuk gambar */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
-}#42445A
+}
 
 .home .couple img:hover {
     transform: scale(1.05); /* Membesar saat dihover */
@@ -570,10 +595,25 @@ footer ul li a:hover i {
 /* ukuran handphone */
 
 @media (max-width: 576px) {
+  
+      .hero .mempelai img {
+        width: 80%; /* Lebar gambar mengikuti container */
+        height: auto; /* Tinggi disesuaikan secara otomatis */
+        max-width: 300px; /* Lebar maksimum untuk mobile */
+    }
+  
+  .hero h1 {
+    font-family: "Sacramento", serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.hero h4 {
+    font-size: 1rem;
+}
+
     .navbar-nav {
-
         text-align: center; /* Pusatkan teks di mobile */
-
     }
 
     .nav-link {
