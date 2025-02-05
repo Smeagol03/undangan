@@ -14,18 +14,24 @@ body {
     min-height: 2000px;
 }
 
-.hero::before {
-    content: '';
+.carousel {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(img/tree-838667_1920.jpg);
-    background-size: cover; /* Memastikan gambar memenuhi seluruh area */
-    background-position: center center; /* Mengambil bagian tengah gambar */
-    z-index: -1;
- }
+    z-index: -1; /* Menempatkan carousel di belakang konten */
+  }
+
+  .carousel-item {
+    height: 100vh; /* Sesuaikan dengan tinggi yang diinginkan */
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
  
 
 .hero {
@@ -57,9 +63,8 @@ body {
 
 .hero h1 {
     font-family: "Sacramento", serif;
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .hero h4 {
